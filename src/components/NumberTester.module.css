@@ -4,6 +4,13 @@
 	overflow-x: auto;
 }
 
+.number_tester__col_header {
+	width: 100%;
+	background-color: grey;
+	color: white;
+	margin: 0 0 20px;
+	padding: 10px 0;
+}
 .number_tester__col {
 	display: inline-block;
 	border: 2px solid gray;
@@ -19,4 +26,14 @@
 
 .number_tester__col:last-child {
 	flex: 0 0 300px;
+}
+
+.number_tester__col select {
+	padding: 0.2rem 1rem;
+	color: blue;
+}
+
+.number_tester__col input {
+	padding: 0.2rem 0;
+	color: blue;
 }

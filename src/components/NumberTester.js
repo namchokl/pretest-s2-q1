@@ -54,10 +54,7 @@ const NumberTester = () => {
 	const [testResult, setTestResult] = useState('');
 
 	const testNumberChangeHandler = (e) => {
-		console.log(e.target.value);
-
 		const number = Math.max(parseInt(e.target.value), 1);
-
 		setTestNumber(isNaN(number) ? 1 : number);
 	};
 
@@ -74,22 +71,21 @@ const NumberTester = () => {
 			? 'true'
 			: 'false';
 
-		setTestResult(`${testNumber} - ${result}`);
+		setTestResult(`${result}`);
 	}, [testNumber, testMode]);
 
 	return (
 		<div className={classes.number_tester__container}>
 			<div className={classes.number_tester__col}>
-				<p>Number to test</p>
+				<p className={classes.number_tester__col_header}>Number to test</p>
 				<input
 					type='number'
 					value={testNumber}
 					onChange={testNumberChangeHandler}
-					// onBlur={testNumberBlurHandler}
 				/>
 			</div>
 			<div className={classes.number_tester__col}>
-				<p>Test mode</p>
+				<p className={classes.number_tester__col_header}>Test mode</p>
 				<select
 					id='testmode'
 					onChange={testModeChangeHandler}
@@ -100,7 +96,7 @@ const NumberTester = () => {
 				</select>
 			</div>
 			<div className={classes.number_tester__col}>
-				<p>Test result</p>
+				<p className={classes.number_tester__col_header}>Test result</p>
 				<p>{testResult}</p>
 			</div>
 		</div>
