@@ -1,0 +1,22 @@
+.number_tester__container {
+	display: flex;
+	color: blue;
+	overflow-x: auto;
+}
+
+.number_tester__col {
+	display: inline-block;
+	border: 2px solid gray;
+}
+
+.number_tester__col:first-child {
+	flex: 0 0 200px;
+}
+
+.number_tester__col:nth-child(2) {
+	flex: 1 0 100px;
+}
+
+.number_tester__col:last-child {
+	flex: 0 0 300px;
+}
